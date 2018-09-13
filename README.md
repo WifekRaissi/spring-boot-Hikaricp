@@ -2,17 +2,19 @@
 
 Dans le tutorial précédent(https://github.com/WifekRaissi/spring-boot-rest-data-mysql) on a commencé l'intégration d'une base de données MySQL à l'application Spring Boot. 
 Pour accéder à  une base de données on peut utiliser une Datasource qui est une interface permettant l'accés aux sources de données physiques.
-L'implémentation d'une DataSource permet de facilement gérer les propriétés des sources de données. En plus que les instances de Connection fournies par les DataSouce ont des capacités étendues.
-Il existe trois grands types d'implémentation pour une Datasourse:
 
-   ##     Basiques:
+# Implémentation d'une DataSourse
+L'implémentation d'une DataSource permet de facilement gérer les propriétés des sources de données. En plus que les instances de Connection fournies par les DataSouce ont des capacités étendues.
+Il existe trois grands types d'implémentation pour une DataSource:
+
+   ##     Implémentations Basiques:
    ces implémentations produisent des instances de Connection normales, telles que l'on pourrait les obtenir avec DriverManager
 
-   ##     Transactions distribuées:
+   ##    Implémentations par des Transactions distribuées:
    ces implémentations produisent des instances de Connection, qui peuvent être utilisées pour des transactions distribuées. 
 :
    
-##       Pool de connexions:
+##     Implémentation par les Pools de connexions:
 ces implémentations produisent des instances de Connection qui appartiennent à un pool.
 
 C'est ce dernier type qui nous intéresse.
