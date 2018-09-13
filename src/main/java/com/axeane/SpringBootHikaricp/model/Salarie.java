@@ -18,7 +18,7 @@ public class Salarie {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
-    private static final AtomicInteger count = new AtomicInteger(0);
+    //private static final AtomicInteger count = new AtomicInteger(0);
 
     @NotEmpty
     @NotNull
@@ -40,9 +40,6 @@ public class Salarie {
         return id;
     }
 
-    public void setId(long id) {
-        this.id = id;
-    }
 
     public String getNom() {
         return nom;
@@ -93,7 +90,7 @@ public class Salarie {
         this.prenom = prenom;
         this.salaire = salaire;
         this.adresse = adresse;
-        id = count.incrementAndGet();
+       // id = count.incrementAndGet();
     }
 
     @Override
@@ -124,3 +121,6 @@ public class Salarie {
         return Objects.hash(getId(), getNom(), getPrenom(), getSalaire(), getAdresse());
     }
 }
+
+
+

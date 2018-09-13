@@ -1,4 +1,4 @@
-package com.axeane.SpringBootHikaricp;
+package com.axeane.SpringBootHikaricp.config;
 
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;

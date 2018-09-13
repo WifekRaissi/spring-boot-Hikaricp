@@ -1,6 +1,5 @@
 package com.axeane.SpringBootHikaricp.services;
 
-
 import com.axeane.SpringBootHikaricp.model.Salarie;
 import com.axeane.SpringBootHikaricp.repositories.SalariesRepository;
 import org.slf4j.Logger;
@@ -39,8 +38,7 @@ public class SalariesServiceImpl implements SalariesService {
     @Override
     public void deleteSalaried(Long id) {
         Salarie salarie = findSalariedById(id);
-        salariesRepository.delete(salarie);
-    }
+        salariesRepository.delete(salarie); }
 
     @Override
     public void updateSalarie(Salarie salarie) {
@@ -50,6 +48,5 @@ public class SalariesServiceImpl implements SalariesService {
             salarie1.setPrenom(salarie.getPrenom());
             salarie1.setAdresse(salarie.getAdresse());
             salarie1.setSalaire(salarie.getSalaire());
-        }
-    }
+        } }
 }
