@@ -55,18 +55,63 @@ A partir de Spring 2.x pas besoin d'ajouter la dépendance puisque HikariCP est 
 
 
 on peut aussi configurer d'autres propriétés parmi la liste suivante:
+
 autoCommit
+
 connectionTimeout
+
 idleTimeout
+
 maxLifetime
+
 connectionTestQuery
+
 connectionInitSql
+
 validationTimeout
+
 maximumPoolSize
+
 poolName
+
 allowPoolSuspension
+
 readOnly
+
 transactionIsolation
+
 leakDetectionThreshold
+
+Pour s'assurer qu'on est entrain d'utiliser HikariCP on peut afficher la Datasource:
+
+
+``import javax.sql.DataSource;
+
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class SpringBootHikaricpApplication implements CommandLineRunner {
+    private final DataSource dataSource;
+
+    public SpringBootHikaricpApplication(DataSource dataSource) {
+        this.dataSource = dataSource;
+    }
+
+    public static void main(String[] args) throws Exception {
+        SpringApplication.run(SpringBootHikaricpApplication.class, args);
+    }
+
+    @Override
+    public void run(String... args) throws Exception {
+        System.out.println("DataSource = " + dataSource);
+    }
+}
+```
+```
+
+
+   ![alt text](https://github.com/WifekRaissi/spring-boot-Hikaricp/blob/master/src/main/resources/images/hikariex.PNG)
 
 
